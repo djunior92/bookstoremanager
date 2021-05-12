@@ -1,6 +1,7 @@
 package com.djalmajunior.bookstoremanager.users.entity;
 
 import com.djalmajunior.bookstoremanager.books.entity.Book;
+import com.djalmajunior.bookstoremanager.entity.Auditable;
 import com.djalmajunior.bookstoremanager.users.enums.Gender;
 import lombok.Data;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class User {
+public class User extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
